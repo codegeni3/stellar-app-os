@@ -23,7 +23,26 @@ interface SocialLink {
   ariaLabel: string;
 }
 
-<<<<<<< feat/issue-42-privacy-policy
+const aboutSection: FooterSection = {
+  title: "About",
+  links: [
+    { label: "About FarmCredit", href: "#about" },
+    { label: "Blog", href: "/blog" },
+    { label: "Documentation", href: "#docs" },
+  ],
+};
+
+const resourcesSection: FooterSection = {
+  title: "Resources",
+  links: [
+    { label: "Settings", href: "/settings" },
+    { label: "API Documentation", href: "/api-docs" },
+    { label: "Developer Guide", href: "#dev-guide" },
+    { label: "Community", href: "#community" },
+  ],
+};
+
+
 const legalSection: FooterSection = {
   title: 'Legal',
   links: [
@@ -32,7 +51,6 @@ const legalSection: FooterSection = {
     { label: 'Cookie Policy', href: '/privacy#cookies-and-similar-technologies' },
   ],
 };
-=======
 function buildFooterSections(t: TFunction): FooterSection[] {
   return [
     {
@@ -61,7 +79,7 @@ function buildFooterSections(t: TFunction): FooterSection[] {
     },
   ];
 }
->>>>>>> main
+
 
 function buildSocialLinks(t: TFunction): SocialLink[] {
   return [

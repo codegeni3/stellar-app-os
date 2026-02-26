@@ -32,7 +32,15 @@ export default function Home(): JSX.Element {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-8">
-      
+      <header className="flex w-full max-w-6xl items-center justify-between">
+        <Text variant="h4" className="font-semibold">
+          FarmCredit
+        </Text>
+        <Button asChild variant="default" size="sm">
+          <Link href="/api-docs">API Docs</Link>
+        </Button>
+      </header>
+
       <div data-tour-id="hero-section" className="flex flex-col items-center gap-4 text-center">
         <Badge variant="default">{t('home.badge')}</Badge>
         <Text variant="h1">{t('home.title')}</Text>
@@ -111,6 +119,11 @@ export default function Home(): JSX.Element {
           >
             <Link href="/credits/purchase">{t('home.purchaseCarbon')}</Link>
           </Button>
+          <Button asChild variant="outline" size="lg" className="w-full">
+            <Link href="/api-docs">Explore API Documentation</Link>
+          </Button>
+          <Button data-tour-id="purchase-credits-button" asChild variant="outline" size="lg" className="w-full">
+            <Link href="/credits/purchase">Purchase Carbon Credits</Link>
           <Button
             asChild
             variant="default"
